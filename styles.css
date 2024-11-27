@@ -1,3 +1,7 @@
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+}
  .navbar{
     display: flex;
     align-items: center;
@@ -9,6 +13,11 @@
     object-fit:cover;
     width: 50px;
 
+}
+main{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: sans-serif;
 }
 .menu {
     display: flex;
@@ -40,6 +49,7 @@ font-size: 17px;
 }
 .discover{
     padding: 40px;
+    
 }
 .heading{
     display: flex;
@@ -47,6 +57,7 @@ font-size: 17px;
     text-align: center;
     align-items: center;
     margin-bottom: 20px;
+    border-left: none;
     
 }
 .popular{
@@ -89,9 +100,23 @@ font-size: 17px;
     justify-content: left;
     align-items: flex-end;
     color:whitesmoke;
+    margin-bottom: 10px;
+    position: relative;
+}
+.bookmark img{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+   right: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    padding: 5px;
 }
 .cards{
         display: grid;
+        row-gap: 10px;
+        column-gap: 10px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8,500px);
 }
@@ -108,7 +133,7 @@ font-size: 17px;
     bottom: 10;
     
 }
-.card div{
+.card div:first-child{
     position: absolute;
     left: 10;
     bottom: 10;
@@ -143,24 +168,29 @@ font-size: 17px;
     padding: 10px;
 }
 
-h3 {
+#contact h3 {
     font-size: 1.5em;
     text-align: center;
+    text-decoration: underline;
+  text-decoration-color:orangered; 
+
 }
 
 .contact_info {
     display: block; /* Stack all elements vertically by default */
+    border:1px solid  gray;
 }
 
 .contact_info_item {
     width: 100%; /* Full width for each item on mobile */
+    border-right: 1px solid gray;
     margin-bottom: 20px;
 }
 
 .contact_info_item h4 {
     font-size: 1.1em;
     margin-bottom: 10px;
-    border-bottom: 2px solid red; /* Red border for the h4 tag */
+     /* Red border for the h4 tag */
     padding-bottom: 5px;
 }
 
@@ -168,14 +198,21 @@ h3 {
     font-size: 0.9em;
     margin-bottom: 10px;
 }
+footer {
+    background-color: rgb(0, 0, 51);
+    padding: 20px 0px;
+    color: #ededed;
+    font-family: ubuntu, rubik;
+    text-align: center;
+    font-weight: 400;
+  }
 .footer-container{
     display:grid;
     grid-template-columns: 1;
     grid-template-rows: repeat(4,1fr);
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: whitesmoke;
+    align-content: center;
+    justify-items: center;
+    margin:0;
 }
 .social-icons img{
     width: 20px;
@@ -185,18 +222,21 @@ h3 {
     text-align: center;
     margin-top: 0;
 }
+
 .footer-item h3{
     color: orange;
 }
 .footer-item ul{
     list-style: none;
+    
+}
+.footer-item li{
+    row-gap: 5px;
 }
 .footer_rights{
-    margin-top:20px;
-    padding:0px -40px;
-    background-color: black;
+    margin:0;
     text-align: center;
-    color: whitesmoke;
+    border-top: 1px solid #2f2f58;
 }
 
 @media (min-width: 480px) and (max-width: 768px){
@@ -212,6 +252,15 @@ h3 {
     .navbar{
         justify-content: space-between;
         flex-direction: row;
+    }
+    .heading{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        border-left: 5px solid orange;
+        
     }
     .popular{
         flex-direction: row;
@@ -248,13 +297,16 @@ h3 {
     grid-template-rows: 1;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    color: whitesmoke;
     height: 30vh;
-    margin-top: 0;
-    margin-bottom: 0;
+    text-align: start;
+    
 }
-
+.footer-item ul{
+    text-align: start;
+}
+.footer-item h3{
+    padding-top: 0px;
+}
 }
 
   
