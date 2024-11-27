@@ -192,7 +192,8 @@ h3 {
     list-style: none;
 }
 .footer_rights{
-
+    margin-top:20px;
+    padding:0px -40px;
     background-color: black;
     text-align: center;
     color: whitesmoke;
